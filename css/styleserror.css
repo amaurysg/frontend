@@ -75,7 +75,7 @@ ul:hover {
   display: flex;
   flex-direction: column;
   animation-name: pulse;
-  animation-duration: 1s;
+  animation-duration: 2s;
   justify-items: center;
   text-align: center;
   font-family: "Muli", sans-serif;

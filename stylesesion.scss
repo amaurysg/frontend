@@ -1,40 +1,48 @@
+$blanco: white;
+$grandient_color: linear-gradient(#6886c5, #ffacb7);
 body {
   font-family: "Muli", sans-serif;
 }
+//Clase donde llenamos configuraciones
 
 /* .clase_config {
 
   display: flex;
 } */
-.header {
+@mixin clase {
   display: flex;
+}
+
+.header {
+  //@extend .clase_config;
+  @include clase;
   background-color: #6886c5;
   width: 100%;
   height: 80px;
+  //display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .header__img {
   width: 200px;
   margin-top: none;
   margin-left: 10px;
 }
-
 .login {
-  display: flex;
-  background: linear-gradient(#6886c5, #ffacb7);
+  @include clase;
+  //@extend .clase_config;
+  background: $grandient_color;
+  //display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 0px 30px;
 }
-
 .login__container {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid white;
   border-radius: 40px;
-  color: white;
+  color: $blanco;
   padding: 60px 68px 40px;
   min-height: 700px;
   width: 300px;
@@ -42,45 +50,37 @@ body {
   justify-content: space-around;
   flex-direction: column;
 }
-
 .login__container--form {
   display: flex;
   flex-direction: column;
 }
-
 .login__container--form label {
   font-size: 14px;
 }
-
 .login__container--remenber-me {
   color: white;
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
-
 .login__container--remenber-me a {
   color: white;
   font-size: 14px;
   text-decoration: none;
 }
-
 .login__container--remenber-me a:hover {
   text-decoration: underline;
 }
-
 .login__container--social--media > div {
   display: flex;
   align-items: center;
   font-size: 14px;
   margin-bottom: 10px;
 }
-
 .login__container--social--media > img {
   width: 30px;
   margin-right: 10px;
 }
-
 .login__container--register {
   font-size: 14px;
 }
@@ -92,6 +92,7 @@ body {
   text-decoration: none;
 }
 
+//Anidamiento container + a //
 /* .login__container--register {
   font-size: 14px;
   a {
@@ -104,7 +105,6 @@ body {
 .login__container--register a:hover {
   text-decoration: underline;
 }
-
 .input {
   background-color: transparent;
   border-left: 0px;
@@ -119,11 +119,9 @@ body {
   height: 50px;
   color: white;
 }
-
 ::placeholder {
   color: white;
 }
-
 .button {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
@@ -136,8 +134,8 @@ body {
   height: 50px;
   letter-spacing: 0.5px;
   margin: 10px 0px;
+  //outline: none;
 }
-
 .footer {
   background-color: #ffacb7;
   display: flex;
@@ -146,7 +144,6 @@ body {
   width: 100%;
   justify-content: space-around;
 }
-
 .footer a {
   color: white;
   cursor: pointer;
@@ -161,11 +158,8 @@ body {
     border: none;
     width: 100%;
   }
-
   .footer {
     align-items: flex-start;
     flex-direction: column;
   }
 }
-
-/*# sourceMappingURL=stylesesion.css.map */

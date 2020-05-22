@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400&family=Orbitron&display=swap"
       rel="stylesheet"
@@ -10,155 +11,8 @@
     <title>Simpsonizados</title>
   </head>
   <style>
-    body {
-      background: rgb(2, 0, 36);
-      background: linear-gradient(
-        90deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(250, 255, 0, 1) 0%,
-        rgba(9, 90, 121, 1) 92%
-      );
-      font-family: "Muli", sans-serif;
-    }
-    .header {
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header__img {
-      width: 200px;
-      margin-top: none;
-      margin-left: 10px;
-    }
-    .header__menu {
-      margin: 30px;
-    }
-    .header__menu ul {
-      display: none;
-      list-style: none;
-      padding: 0px;
-      position: absolute;
-      width: 100px;
-      text-align: right;
-      margin: 0px 0px 0px -14px;
-    }
-    .header__menu:hover ul,
-    ul:hover {
-      display: block;
-    }
-    .header__menu li {
-      margin: 10px 0px;
-    }
-    .header__menu li a {
-      color: white;
-      text-decoration: underline;
-    }
-    .header__menu li a:hover {
-      text-decoration: underline;
-    }
-    .header__menu--profile {
-      color: white;
-      margin-right: 8px;
-      margin-top: 8px;
 
-      display: flex;
-      align-items: center;
-    }
-    .main {
-      height: 300px;
-    }
-    .main__title {
-      color: white;
-    }
-    .input {
-      border: 2px solid white;
-      border-radius: 25px;
-      font-family: "Muli", sans-serif;
-      font-size: 17px;
-      color: blue;
-      height: 20px;
-      padding: 20px;
-      width: 70%;
-      outline: none;
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    ::placeholder {
-      color: white;
-    }
-     .carrusel {
-      width: 100%;
-      overflow: scroll;
-      padding: 30px;
-      position: relative;
-    }
-    .carrule__container {
-      white-space: nowrap;
-      margin: 70px 0px;
-      padding-bottom: 10px;
-    }
-    .carrusel-item {
-      background-color: blue;
-      width: 220px;
-      height: 250px;
-      border-radius: 20px;
-      overflow: hidden;
-      margin-right: 10px;
-      display: inline-block;
-      cursor: pointer;
-      transition: 450ms all;
-      transform-origin: center left;
-      position: relative;
-    }
-    .carrusel-item:hover ~ .carrusel-item {
-      transform: translate3d(100px, 0, 0);
-    }
-    .carrule__container:hover .carrusel-item {
-      opacity: 0.3;
-    }
-    .carrule__container:hover .carrusel-item:hover {
-      transform: scale(1.5);
-      opacity: 1;
-    }
-    .carrusel-item__img{
-      width: 220px;
-      height: 250px;
-      object-fit: cover;
-    }
-    .carrusel-item__details{
-      background: linear-gradient(to top, rgba(0,0,0,0.9)0%, rgba(0,0,0,0)100%);
-      font-size: 10px;
-      opacity: 0;
-      transition: 450ms opacity;
-      padding: 10px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      
-   
-    }
-         .carrusel-item__details:hover {
-      opacity:1;
-    }
-   .carrusel-item__details__icons{
-     width: 20px;
-     height: 20px;
-   
-     
-   }
-    .carrusel-item__details--title{
-      font-family: Arial;
-      color:white;
-    }
-    .carrusel-item__details--subtitle{
-      font-family: Arial;
-      color:white;
-      
-
-    }
+  
     
   </style>
   <body>
@@ -188,8 +42,10 @@
       <h2 class="main__title">Qué capitulo quieres ver?</h2>
       <input class="input" type="text" placeholder="Buscar..." name="" id="" />
     </section>
+
+    <h2 class="categories__title">Capitulos</h2>
     <section class="carrusel">
-        <div class="carrule__container">
+        <div class="carrusel__container">
           <div class="carrusel-item">
           <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/homerohereje.jpg" alt="city1">
           <div class="carrusel-item__details">
@@ -204,6 +60,126 @@
         </div>
         <div class="carrusel-item">
           <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/mamasimpson.jpg" alt="city1">
+          <div class="carrusel-item__details">
+            <div>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/icons8-play-64 (1).png" alt="play"/>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/plusg.png" alt="plus"> 
+            </div>
+            
+            <p class="carrusel-item__details--title">Titulo descriptivo</p>
+             <p class="carrusel-item__details--subtitle">2019 16+ 14</p>
+          </div>
+          
+          
+        </div>
+        <div class="carrusel-item">
+          <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/monorriel.jpg" alt="city1">
+          <div class="carrusel-item__details">
+            <div>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/icons8-play-64 (1).png" alt="play"/>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/plusg.png" alt="plus"> 
+            </div>
+            
+            <p class="carrusel-item__details--title">Titulo descriptivo</p>
+             <p class="carrusel-item__details--subtitle">2019 16+ 14</p>
+          </div>
+          
+          
+        </div>
+        <div class="carrusel-item">
+          <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/bartalma.jfif" alt="city1">
+          <div class="carrusel-item__details">
+            <div>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/icons8-play-64 (1).png" alt="play"/>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/plusg.png" alt="plus"> 
+            </div>
+            
+            <p class="carrusel-item__details--title">Titulo descriptivo</p>
+             <p class="carrusel-item__details--subtitle">2019 16+ 14</p>
+          </div>
+          
+          
+        </div>
+        <div class="carrusel-item">
+          <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/explorador.jpg" alt="city1">
+          <div class="carrusel-item__details">
+            <div>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/icons8-play-64 (1).png" alt="play"/>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/plusg.png" alt="plus"> 
+            </div>
+            
+            <p class="carrusel-item__details--title">Titulo descriptivo</p>
+             <p class="carrusel-item__details--subtitle">2019 16+ 14</p>
+          </div>
+          
+          
+        </div>
+        <div class="carrusel-item">
+          <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/explorador.jpg" alt="city1">
+          <div class="carrusel-item__details">
+            <div>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/icons8-play-64 (1).png" alt="play"/>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/plusg.png" alt="plus"> 
+            </div>
+            
+            <p class="carrusel-item__details--title">Titulo descriptivo</p>
+             <p class="carrusel-item__details--subtitle">2019 16+ 14</p>
+          </div>
+          
+          
+        </div>
+
+        <div class="carrusel-item">
+          <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/cumple.png" alt="city1">
+          <div class="carrusel-item__details">
+            <div>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/icons8-play-64 (1).png" alt="play"/>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/plusg.png" alt="plus"> 
+            </div>
+            
+            <p class="carrusel-item__details--title">Titulo descriptivo</p>
+             <p class="carrusel-item__details--subtitle">2019 16+ 14</p>
+          </div>
+          
+          
+        </div>
+       
+        </div>
+      </div>
+      </div>
+    </section>
+
+     <h2 class="categories__title">Favoritos</h2>
+    <section class="carrusel">
+        <div class="carrusel__container">
+          <div class="carrusel-item">
+          <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/homerohereje.jpg" alt="city1">
+          <div class="carrusel-item__details">
+            <div>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/play1.png" alt="play"/>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/plusg.png" alt="plus"> 
+            </div>
+            
+            <p class="carrusel-item__details--title">Homero hereje</p>
+             <p class="carrusel-item__details--subtitle">Temp 4 Ep 02</p>
+          </div>
+        </div>
+        <div class="carrusel-item">
+          <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/mamasimpson.jpg" alt="city1">
+          <div class="carrusel-item__details">
+            <div>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/icons8-play-64 (1).png" alt="play"/>
+              <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/plusg.png" alt="plus"> 
+            </div>
+            
+            <p class="carrusel-item__details--title">Titulo descriptivo</p>
+             <p class="carrusel-item__details--subtitle">2019 16+ 14</p>
+          </div>
+          
+          
+        </div>
+        <div class="carrusel-item">
+          <img class="carrusel-item__img" src="./curso-frontend-escuelajs-header/imgcities/explorador.jpg" alt="city1">
           <div class="carrusel-item__details">
             <div>
               <img class="carrusel-item__details__icons" src="./curso-frontend-escuelajs-header/icons/icons8-play-64 (1).png" alt="play"/>
@@ -277,5 +253,12 @@
       </div>
       </div>
     </section>
+<footer class="footer">
+    <a href="/">Terminos de uso</a>
+    <a href="/">Declaración de privacidad</a>
+    <a href="/">Centro de ayuda</a>
+  </footer>
+    
+    
   </body>
 </html>

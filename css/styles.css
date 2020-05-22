@@ -1,12 +1,18 @@
 body {
   margin: 0;
   font-family: "Muli", sans-serif;
-  background: #8f57fd;
+  background: rgb(222, 235, 60);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 235, 60, 1) 0%,
+    rgba(0, 212, 255, 1) 100%,
+    rgba(35, 36, 0, 1) 100%
+  );
 }
 
 .header {
   align-items: center;
-  background: #8f57fd;
+
   color: white;
   display: flex;
   height: 100px;
@@ -68,7 +74,7 @@ ul:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 300px;
+  height: 150px;
   border-radius: 0px 0px 40px 40px;
 }
 
@@ -179,9 +185,13 @@ ul:hover {
   margin: 3px 0px;
 }
 
+::-webkit-scrollbar {
+  display: none; /* Ocultar scroll */
+}
+
 .footer {
   align-items: center;
-  background-color: #8f57fd;
+
   display: flex;
   height: 100px;
   width: 100%;

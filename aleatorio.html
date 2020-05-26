@@ -31,7 +31,6 @@
     <!--  <input type="number" id="numdado" placeholder="Cuantos valores  " min="1" /> -->
 
     <section class="section">
-      <input type="number" id="numdado" />
       <input
         class="input"
         type="number"
@@ -72,23 +71,21 @@
         }
       } */
 
+      function aleatorios(min, max) {
+        return Math.round(Math.random() * (max - min) + parseInt(min));
+      }
+
       function generar() {
-        //Defino las variables que traigo de los input del user
-        var numdado = document.getElementById("numdado").value;
+        /* var numdado = document.getElementById("numdado").value; */
         var min = document.getElementById("min1").value;
         var max = document.getElementById("max1").value;
-        //Hago el ciclo for, depende el numdado
-        for (num = 0; num < numdado; num++) {
-          //Añado la función aleatorios
-          function aleatorios(min, max) {
-            return Math.round(Math.random() * (max - min) + parseInt(min));
-          }
-          //Muestro en pantalla
-          document.write(aleatorios(min, max) + "<br>");
-        }
+        var resultado = aleatorios(min, max);
+
+        document.getElementById("gen").value = resultado;
       }
-      //Hago el evento del botón
+
       var b = document.getElementById("boton");
+
       b.addEventListener("click", generar);
     </script>
   </body>

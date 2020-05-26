@@ -77,7 +77,7 @@ for (i = 4; i <= 100; i++) {
 function mostrar10(num) {
   for (num = 1; num < 10; num++) {
     min = 5;
-    max = 10;
+    max = 20;
     function aleatorios(min, max) {
       return Math.floor(Math.random() * (1 + max - min)) + min;
     }

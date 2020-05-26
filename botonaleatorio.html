@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aleatorios</title>
+  </head>
+  <style>
+    .section {
+      align-items: center;
+      margin-left: 50px;
+    }
+    .boton {
+      border-radius: 2px;
+      color: black bold solid 2px;
+      padding: 5px;
+      margin-top: 10px;
+      margin-left: 5px;
+      width: 165px;
+    }
+    .input {
+      border-radius: 2px;
+
+      margin-top: 10px;
+      margin-left: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <body>
+    <!--  <input type="number" id="numdado" placeholder="Cuantos valores  " min="1" /> -->
+
+    <section class="section">
+      <input
+        class="input"
+        type="number"
+        id="min1"
+        placeholder="Num Minimo  "
+        min="1"
+      />
+      <input
+        class="input"
+        type="number"
+        id="max1"
+        placeholder="Num Maximo "
+        min="2"
+      />
+      <button class="boton" id="boton">Genera</button>
+      <input class="input" type="number" id="gen" placeholder="Generado " />
+    </section>
+
+    <script>
+      /*   function aleatorios(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      } */
+
+      /*  function mostrar10(num) {
+        for (num = 1; num < 10; num++) { */
+      /*  const min = document.getElementById("min").value;
+          const max = document.getElementById("max").value; */
+
+      /* const min = document.getElementById("min").value; */
+      /*   var min = document.getElementById("min1").value;
+
+          var max = document.getElementById("max1").value; */
+
+      /* const max = document.getElementById("max").value; */
+
+      /*        var m = aleatorios(min, max);
+          console.log(mostrar10(min, max) + "</br>");
+        }
+      } */
+
+      function aleatorios(min, max) {
+        return Math.round(Math.random() * (max - min) + parseInt(min));
+      }
+
+      function generar() {
+        /* var numdado = document.getElementById("numdado").value; */
+        var min = document.getElementById("min1").value;
+        var max = document.getElementById("max1").value;
+        var resultado = aleatorios(min, max);
+
+        document.getElementById("gen").value = resultado;
+      }
+
+      var b = document.getElementById("boton");
+
+      b.addEventListener("click", generar);
+    </script>
+  </body>
+</html>

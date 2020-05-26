@@ -9,6 +9,7 @@
   <body>
     <header class="header">
       <img
+        tabindex="0"
         class="header__img"
         src="./curso-frontend-escuelajs-header/platzi-video/img/logo.png"
         alt="LogoSimpsons"
@@ -16,10 +17,20 @@
     </header>
     <section class="login">
       <section class="login__container">
-        <h2>Inicia sesión:</h2>
+        <h2 tabindex="0">Inicia sesión:</h2>
         <form class="login__container--form">
-          <input class="input" type="text" placeholder="Correo" />
-          <input class="input" type="password" placeholder="Contraseña" />
+          <input
+            aria-label="Correo"
+            class="input"
+            type="text"
+            placeholder="Correo"
+          />
+          <input
+            arial-label="Contraseña"
+            class="input"
+            type="password"
+            placeholder="Contraseña"
+          />
           <button class="button">Iniciar Sesión</button>
           <div class="login__container--remenber-me">
             <label>

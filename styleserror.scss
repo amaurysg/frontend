@@ -1,6 +1,5 @@
-body {
-  margin: 0;
-  font-family: "Muli", sans-serif;
+$colorLetras: white;
+@mixin colorGeneral {
   background: rgb(222, 235, 60);
   background: linear-gradient(
     90deg,
@@ -8,12 +7,19 @@ body {
     rgba(0, 212, 255, 1) 100%,
     rgba(35, 36, 0, 1) 100%
   );
+  font-family: "Muli", sans-serif;
+}
+
+body {
+  @include colorGeneral;
+  margin: 0;
+  //font-family: "Muli", sans-serif;
 }
 
 .header {
   align-items: center;
 
-  color: white;
+  color: $colorLetras;
   display: flex;
   height: 100px;
   justify-content: space-between;
@@ -78,12 +84,12 @@ ul:hover {
   animation-duration: 2s;
   justify-items: center;
   text-align: center;
-  font-family: "Muli", sans-serif;
+  //font-family: "Muli", sans-serif;
 }
 .container h1 {
   font-size: 100px;
   padding-bottom: 0px;
-  font-family: "Muli", sans-serif;
+  //font-family: "Muli", sans-serif;
   margin: 0px;
 }
 .container_h5 {

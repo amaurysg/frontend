@@ -86,3 +86,11 @@ function mostrar10(num) {
 }
 
 mostrar10();
+
+var items = [];
+
+function guardarNumeros() {
+  boxvalue = document.getElementById('box').value;
+  items.push(boxvalue);  
+  console.log(items);
+}

@@ -26,12 +26,23 @@
       display: flex;
       justify-content: space-between;
     }
+    .inputt {
+      width: 500px;
+    }
+    .textarea {
+      align-items: center;
+    }
   </style>
   <body>
     <!--  <input type="number" id="numdado" placeholder="Cuantos valores  " min="1" /> -->
 
     <section class="section">
-      <input type="number" id="numdado" />
+      <input
+        class="input"
+        type="number"
+        id="numdado"
+        placeholder="Cuantos aleatorios"
+      />
       <input
         class="input"
         type="number"
@@ -47,49 +58,71 @@
         min="2"
       />
       <button class="boton" id="boton">Genera</button>
-      <input class="input" type="number" id="gen" placeholder="Generado " />
+      <input class="input" type="text" id="gen" placeholder="Generado " />
+      <button class="boton" id="botont">Turnos</button>
+
+      <textarea
+        class="textarea"
+        type="text"
+        name=""
+        id="ta"
+        cols="30"
+        rows="10"
+      ></textarea>
     </section>
 
     <script>
       /*   function aleatorios(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-      } */
+             return Math.floor(Math.random() * (max - min)) + min;
+           } */
 
       /*  function mostrar10(num) {
-        for (num = 1; num < 10; num++) { */
+             for (num = 1; num < 10; num++) { */
       /*  const min = document.getElementById("min").value;
-          const max = document.getElementById("max").value; */
+               const max = document.getElementById("max").value; */
 
       /* const min = document.getElementById("min").value; */
       /*   var min = document.getElementById("min1").value;
 
-          var max = document.getElementById("max1").value; */
+               var max = document.getElementById("max1").value; */
 
       /* const max = document.getElementById("max").value; */
 
       /*        var m = aleatorios(min, max);
-          console.log(mostrar10(min, max) + "</br>");
-        }
-      } */
+               console.log(mostrar10(min, max) + "</br>");
+             }
+           } */
 
       function generar() {
         //Defino las variables que traigo de los input del user
         var numdado = document.getElementById("numdado").value;
         var min = document.getElementById("min1").value;
         var max = document.getElementById("max1").value;
-        //Hago el ciclo for, depende el numdado
-        for (num = 0; num < numdado; num++) {
-          //Añado la función aleatorios
-          function aleatorios(min, max) {
-            return Math.round(Math.random() * (max - min) + parseInt(min));
-          }
-          //Muestro en pantalla
-          document.write(aleatorios(min, max) + "<br>");
+        var alea = [];
+        var turnos = [];
+
+        //función aleatorio
+        function aleatorios(min, max) {
+          return Math.round(Math.random() * (max - min) + parseInt(min));
         }
+
+        //Hago el ciclo for, depende el numdado
+        for (t = 1; t <= 3; t++) {
+          for (num = 0; num < numdado; num++) {
+            alea[num] = aleatorios(min, max);
+          }
+          turnos[t] = "Turno " + t + ": " + alea + "\n";
+        }
+
+        document.getElementById("ta").value = turnos;
       }
+
       //Hago el evento del botón
       var b = document.getElementById("boton");
       b.addEventListener("click", generar);
+
+      /*  var bt = document.getElementById("botont");
+           bt.addEventListener("click", generat); */
     </script>
   </body>
 </html>
